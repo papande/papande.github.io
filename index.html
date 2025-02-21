@@ -14,10 +14,14 @@
             text-align: center;
         }
         #content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 650px;
+        }
+        #overlayImage {
+        width: 100%; 
+        height: auto;
         }
         video {
             width: 100vw;
@@ -31,22 +35,8 @@
         <source src="videoplayback.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <!--
     <div id="content">
-        <h1>Welcome to Microsoft Teams Room</h1>
-        <p id="datetime"></p>
+        <img src="BluechipUCLogo__002_.png" alt="Signage Logo" id="overlayImage">
     </div>
-    -->
-    <script>
-        function updateDateTime() {
-            const now = new Date();
-            document.getElementById('datetime').innerText = now.toLocaleString();
-        }
-        setInterval(updateDateTime, 1000);
-        updateDateTime();
-        
-        // Auto-refresh every 10 minutes
-        setTimeout(() => location.reload(), 600000);
-    </script>
 </body>
 </html>
