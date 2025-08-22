@@ -1,0 +1,71 @@
+{
+  "level1": [
+    {
+      "word": "gorp",
+      "definition": "A snack food consisting of a mixture of nuts, dried fruit, and sometimes chocolate, commonly eaten by hikers or as a high-energy snack; also known as trail mix.",
+      "partOfSpeech": "noun",
+      "origin": "An acronym or backronym, often cited as 'Good Old Raisins and Peanuts,' dating back to the 1960s.",
+      "sentence": "We packed plenty of gorp for our long day of hiking in the mountains."
+    },
+    {
+      "word": "town",
+      "definition": "A populated area with a fixed boundary and a local government, larger than a village but generally smaller than a city.",
+      "partOfSpeech": "noun",
+      "origin": "Old English t\u016bn 'enclosed place, settlement, village'",
+      "sentence": "The small town celebrated its annual summer festival."
+    }
+  ],
+  "level2": [
+    {
+      "word": "challenge",
+      "definition": "A task or situation that tests someone's abilities or determination; a call to someone to participate in a competitive encounter.",
+      "partOfSpeech": "noun",
+      "origin": "From Old French 'chalenge' (accusation, dispute), from Latin 'calumnia' (false accusation).",
+      "sentence": "Learning to play a musical instrument can be a fun challenge."
+    },
+    {
+      "word": "cahoots",
+      "definition": "Secret partnership or agreement; colluding.",
+      "partOfSpeech": "noun",
+      "origin": "Probably from French 'cahute' (a hut, cabin), implying a secret meeting place.",
+      "sentence": "The two politicians were suspected of being in cahoots to sway the election results."
+    },
+    {
+      "word": "oozing",
+      "definition": "Flowing slowly and steadily out of something, or gradually exuding a particular quality or feeling.",
+      "partOfSpeech": "verb",
+      "origin": "From the verb 'ooze', which comes from Old English 'w\u014ds' meaning 'sap' or 'mire'.",
+      "sentence": "Thick, dark honey was oozing from the broken comb."
+    }
+  ],
+  "level3": [
+    {
+      "word": "yosenabe",
+      "definition": "A Japanese hot-pot dish made with various ingredients (such as vegetables, tofu, meat, and seafood) cooked together in a broth.",
+      "partOfSpeech": "noun",
+      "origin": "Japanese, from \u5bc4\u305b\u934b (yosenabe), literally 'gathering pot'.",
+      "sentence": "For dinner, we decided to make yosenabe with fresh seafood and vegetables."
+    },
+    {
+      "word": "funori",
+      "definition": "A mucilaginous substance obtained from certain red algae, especially Gloiopeltis furcata, used in Japan as a sizing agent for textiles and paper, and as an adhesive.",
+      "partOfSpeech": "noun",
+      "origin": "Japanese",
+      "sentence": "The conservator considered using funori to repair the delicate antique paper."
+    },
+    {
+      "word": "piloncillo",
+      "definition": "An unrefined whole cane sugar, common in Mexico and Latin America, typically sold in small, conical or block shapes, with a distinct caramel-like flavor.",
+      "partOfSpeech": "noun",
+      "origin": "Spanish",
+      "sentence": "She grated some piloncillo into the pot to sweeten the mole sauce."
+    },
+    {
+      "word": "xiphias",
+      "definition": "A genus of large, predatory marine fish, most notably the swordfish (Xiphias gladius), characterized by a long, flat bill or sword.",
+      "partOfSpeech": "noun",
+      "origin": "From Greek xiphias 'swordfish', from xiphos 'sword'.",
+      "sentence": "The scientific name for the swordfish is *Xiphias gladius*."
+    }
+  ]
+}

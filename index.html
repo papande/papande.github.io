@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spelling Bee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Spelling Bee 🐝</h1>
+
+<div class="controls">
+        <label for="word-list">Choose a level:</label>
+        <select id="word-list">
+            <option value="level1">Level 1</option>
+            <option value="level2">Level 2</option>
+            <option value="level3">Level 3</option>
+        </select>
+        <button id="get-word-btn">Get New Word</button>
+    </div>
+
+    <div id="word-info" class="hidden">
+        <h2 id="word-display"></h2>
+        <p><strong>Part of Speech:</strong> <span id="part-of-speech"></span></p>
+        <p><strong>Definition:</strong> <span id="definition"></span></p>
+        <p><strong>Origin:</strong> <span id="origin"></span></p>
+        <p><strong>Example Sentence:</strong> <em id="sentence"></em></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

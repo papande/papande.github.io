@@ -1,0 +1,87 @@
+/* Import a nice font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 2rem;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+/* Container for the controls */
+.controls {
+    background-color: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+select, button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* The main box for word information */
+#word-info {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 80%;
+    max-width: 700px;
+    opacity: 1;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(0);
+}
+
+#word-info.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    display: block; /* Keep it in the layout for the transition */
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#word-display {
+    color: #3498db;
+    margin-top: 0;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+#word-info p {
+    line-height: 1.6;
+}
+
+#word-info p strong {
+    color: #2c3e50;
+}
