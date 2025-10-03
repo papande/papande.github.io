@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi Memorization Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #1c1e21;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+        h1 {
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #606770;
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            font-size: 1.2em;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 8px;
+            border: 1px solid #ccd0d5;
+            box-sizing: border-box;
+            resize: none;
+            margin-bottom: 20px;
+        }
+        textarea:focus {
+            outline: none;
+            border-color: #0056b3;
+            box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 25px;
+            font-size: 1.2em;
+            font-weight: 500;
+            min-height: 50px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .correct {
+            color: #28a745;
+            background-color: #e9f7eb;
+        }
+        .incorrect {
+            color: #dc3545;
+            background-color: #fbebed;
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+        .success-animation {
+            animation: success-pop 0.5s ease-out;
+        }
+        @keyframes success-pop {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pi Memorization Challenge 🥧</h1>
+        <p>Type the digits of Pi after the decimal point (3. ...). Can you reach 50?</p>
+        
+        <textarea id="piInput" placeholder="14159..."></textarea>
+        
+        <button onclick="checkPi()">Check My Memory</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function checkPi() {
+            // The first 50 digits of Pi after the decimal.
+            const piDigits = "14159265358979323846264338327950288419716939937510";
+            
+            // Get user input and the result element.
+            let userInput = document.getElementById('piInput').value;
+            let resultDiv = document.getElementById('result');
+            
+            // Remove any non-numeric characters from the input.
+            userInput = userInput.replace(/\D/g, '');
+
+            // Reset styles
+            resultDiv.className = '';
+            resultDiv.classList.remove('success-animation');
+
+            if (userInput.length === 0) {
+                resultDiv.innerHTML = "Please enter some digits to check.";
+                resultDiv.className = 'incorrect';
+                return;
+            }
+
+            let correctCount = 0;
+            for (let i = 0; i < userInput.length; i++) {
+                if (userInput[i] === piDigits[i]) {
+                    correctCount++;
+                } else {
+                    break; // Stop checking after the first mistake.
+                }
+            }
+
+            if (correctCount === 50 && userInput.length >= 50) {
+                // Success!
+                resultDiv.innerHTML = "🎉 SUCCESS! You correctly recalled all 50 digits of Pi! 🎉";
+                resultDiv.className = 'success';
+                resultDiv.classList.add('success-animation');
+            } else if (correctCount === userInput.length) {
+                // All entered digits are correct, but not 50 yet.
+                resultDiv.innerHTML = `You have correctly entered <strong>${correctCount}</strong> digits so far. Keep going!`;
+                resultDiv.className = 'correct';
+            } else {
+                // There was an error.
+                let feedback = `You got the first <strong>${correctCount}</strong> digits right.<br>`;
+                feedback += `The digit at position ${correctCount + 1} should be <strong>${piDigits[correctCount]}</strong>, but you wrote <strong>${userInput[correctCount]}</strong>.`;
+                resultDiv.innerHTML = feedback;
+                resultDiv.className = 'incorrect';
+            }
+        }
+    </script>
+
+</body>
+</html>
